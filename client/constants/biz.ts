@@ -1,0 +1,111 @@
+/**
+ * 业务相关的常量
+ */
+
+const TH_HEIGHT = 44;
+const TR_HEIGHT = 52;
+const PAGINATION_HEIGHT = 32 + 16 * 2;
+
+// 基本数据类型
+enum BasicType {
+  支付渠道 = 1,
+  发布渠道 = 2,
+  机构等级 = 3,
+  机构类别 = 4,
+  机构性质 = 5,
+  机构类型 = 6,
+  性别 = 7,
+  民族 = 8,
+  国籍 = 9,
+  语言 = 10,
+  婚姻状态 = 11,
+  地区 = 12,
+  诊疗环节 = 13,
+  证件类型 = 14,
+  标准科室 = 15,
+  终端类型 = 16,
+  应用种类 = 17,
+  应用平台 = 18,
+  应用使用者类型 = 19,
+  应用业务类型 = 20,
+}
+
+const AUTHORITIES = {
+  应用管理系统人员权限: 'FARG_HEALTH_APP_ORG_ADMIN',
+  应用新增: 'FARG_ACCESS_APP_ADD',
+  应用删除: 'FARG_ACCESS_APP_DELETE',
+  应用编辑: 'FARG_ACCESS_APP_EDIT',
+  应用查看: 'FARG_ACCESS_APP_DETAILS',
+  应用导出: 'FARG_ACCESS_APP_EXPORT',
+  识别终端系统人员权限: 'FARG_HEALTH_TERMINAL_ORG_ADMIN',
+  终端新增: 'FARG_ACCESS_TERMINAL_ADD',
+  终端删除: 'FARG_ACCESS_TERMINAL_DELETE',
+  终端编辑: 'FARG_ACCESS_TERMINAL_EDIT',
+  终端查看: 'FARG_ACCESS_TERMINAL_DETAILS',
+  终端导出: 'FARG_ACCESS_TERMINAL_EXPORT',
+  机构新增: 'FARG_ACCESS_ORG_ADD',
+  机构删除: 'FARG_ACCESS_ORG_DELETE',
+  机构编辑: 'FARG_ACCESS_ORG_EDIT',
+  机构查看: 'FARG_ACCESS_ORG_DETAILS',
+  机构导出: 'FARG_ACCESS_ORG_EXPORT',
+  卡信息更新: 'FARG_ACCESS_CARD_ACCOUNT_UPDATE',
+  卡账户注销: 'FARG_ACCESS_CARD_ACCOUNT_LOGOUT',
+  卡账户查看: 'FARG_ACCESS_CARD_ACCOUNT_DETAILS',
+  动态设置: 'FARG_ACCESS_QRCODE_GENERATED_SET',
+  静态设置: 'FARG_ACCESS_QRCODE_GENERATED_STATICSET',
+  生成记录查看: 'FARG_ACCESS_QRCODE_GENERATED_DETAILS',
+  验证记录查看: 'FARG_ACCESS_QRCODE_VERIFIED_DETAILS',
+  密码信息登记: 'FARG_ACCESS_PWD_INFO_REGISTER',
+  密码账户注销: 'FARG_ACCESS_PWD_ACCOUNT_LOGOUT',
+  密码账户查看: 'FARG_ACCESS_PWD_ACCOUNT_DETAILS',
+  密码账户编辑: 'FARG_ACCESS_PWD_ACCOUNT_EDIT',
+  接口启用或关闭: 'FARG_ACCESS_API_ENABLE_DISABLE',
+  添加账户: 'FARG_ACCESS_ACCOUNT_ADD',
+  批量导入: 'FARG_ACCESS_ACCOUNT_EXPORT',
+  账户查看: 'FARG_ACCESS_ACCOUNT_DETAILS',
+  账户禁用: 'FARG_ACCESS_ACCOUNT_DISABLE',
+  账户恢复: 'FARG_ACCESS_ACCOUNT_RESUNE',
+  账户删除: 'FARG_ACCESS_ACCOUNT_DELETE',
+  账户编辑: 'FARG_ACCESS_ACCOUNT_EDIT',
+  修改密码: 'FARG_ACCESS_ACCOUNT_EDIT_PWD',
+  新增数据: 'FARG_ACCESS_BASIC_ADD',
+  移除数据: 'FARG_ACCESS_BASIC_DELETE',
+  编辑数据: 'FARG_ACCESS_BASIC_EDIT',
+  查看数据: 'FARG_ACCESS_BASIC_DETAILS',
+  添加角色: 'FARG_ACCESS_AUTH_ADD',
+  删除角色: 'FARG_ACCESS_AUTH_DELETE',
+  编辑角色: 'FARG_ACCESS_AUTH_EDIT',
+  查看角色: 'FARG_ACCESS_AUTH_DETAILS',
+  编辑功能权限: 'FARG_ACCESS_AUTH_POWER_EIDT',
+  保存功能权限: 'FARG_ACCESS_AUTH_POWER_SAVE',
+  全部启用: 'FARG_ACCESS_AUTH_USE_ALL',
+  编辑数据权限: 'FARG_ACCESS_AUTH_DATA_EDIT',
+  保存数据权限: 'FARG_ACCESS_AUTH_DATA_SAVE',
+  认证记录查看: 'FARG_ACCESS_API_ORG_VERIFIED_DETAILS',
+  认证记录审批: 'FARG_ACCESS_API_ORG_VERIFIED_APPROVAL',
+  加入记录查看: 'FARG_ACCESS_API_ORG_JOIN_DETAILS',
+  加入记录审批: 'FARG_ACCESS_API_ORG_JOIN_APPROVAL',
+  机构创建记录查看: 'FARG_HEALTH_ORG_CREATE_DETAILS',
+  机构创建记录审批: 'FARG_HEALTH_ORG_CREATE_APPROVAL',
+  机构首页查看认证信息: 'FARG_HOME_ORG_DETAILS',
+  机构首页机构认证: 'FARG_HOME_ORG_VERIFY',
+};
+
+export default {
+  PROJECT_NAME: '测试服务',
+  // table 表格
+  TH_HEIGHT, // 表头高度
+  TR_HEIGHT, // 表每行高度
+  MODAL_WIDTH: 1020,
+  MODAL_WIDTH_M: 960,
+  PAGINATION_HEIGHT, // 分页高度
+  PAGE_SIZE: 10, // 分页每页数量
+  SCROLL_X: 1100,
+  SCROLL_Y: TH_HEIGHT + PAGINATION_HEIGHT, // 表格内垂直滚动减去表头和分页器的高度
+  SCROLL_Y_NO_PAG: TH_HEIGHT,
+
+  // 发送验证码倒计时
+  COUNTDOWN: 60,
+  BasicType,
+  AUTHORITIES,
+};

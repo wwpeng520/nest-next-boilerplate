@@ -1,0 +1,34 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../build/server",
+    "allowJs": true,
+    "noImplicitAny": false,
+    "target": "es2017",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "noEmit": false
+  },
+  "include": ["../server"],
+  "exclude": [
+    "node_modules",
+    "mock",
+    "config",
+    "test",
+    "tests",
+    "dist",
+    "build",
+    "**/*spec.ts",
+    "client",
+    "scripts",
+    "webpack",
+    "jest",
+    ".eslintrc.js"
+  ]
+}

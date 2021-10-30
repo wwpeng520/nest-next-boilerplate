@@ -1,0 +1,14 @@
+@import '~@/client/styles/base.less';
+
+.container {
+  min-width: 100vw;
+  height: 100vh;
+  padding: @offset;
+  background-color: @bg-color;
+
+  .inner {
+    height: calc(100vh - 2 * @offset);
+    overflow-y: auto;
+    background-color: #fff;
+  }
+}
